@@ -42,7 +42,7 @@ Unlike the web solution, the fallback outline does not have to cover the whole a
 
 ##### License
 
-Copyright 2020 [Toshi Omagar] *@Tosche_E*
+Copyright 2020 Toshi Omagari *@Tosche_E*
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

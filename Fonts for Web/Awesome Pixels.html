@@ -1,0 +1,42 @@
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=9">
+	<title>Ray Force Animation Test</title>
+	<style type="text/css" media="screen">
+
+		@font-face { font-family: "P0"; src:url("AwesomePixelsWeb-Yellow.otf"); }
+		@font-face { font-family: "P1"; src:url("AwesomePixelsWeb-Green.otf"); }
+		@font-face { font-family: "P2"; src:url("AwesomePixelsWeb-RedTranslucent.otf"); }
+
+		body { 
+			/*font-family: "P0";*/
+			font-size: 120px;
+			background-color: #888888;
+			padding: 40px 100px;
+			text-align: left;
+		}
+
+		span { 
+			font-size: 60px;
+		}
+
+	</style>
+
+</head>
+<body>
+<span style="font-family:P0" onclick="changeColour(this)">A</span><span style="font-family:P1" onclick="changeColour(this)">A</span><span style="font-family:P2" onclick="changeColour(this)">A</span>
+<br>
+<div id="main" style="font-family:P0" contenteditable="true">
+AWESOME
+PIXELS
+</div>
+<script>
+function changeColour(element) {
+	var theStyle = element.style;
+	var main = document.getElementById("main");
+	main.setAttribute("style", element.style.cssText );
+}
+</script>
+</body>
+</html>

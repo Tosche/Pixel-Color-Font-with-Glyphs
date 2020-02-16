@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/Tosche/Pixel-Color-Font-with-Glyphs/master/Images/Title.gif" alt="Title">
+<img src="https://raw.githubusercontent.com/Tosche/Pixel-Color-Font-with-Glyphs/master/Images/Title.png" alt="Title">
 
 # INTRO
 

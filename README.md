@@ -24,7 +24,7 @@ The instances are set up for web and desktop, since the browser/desktop support 
 
 ### Web
 
-The web version has to be COLR/CPAL, and the Web instances in this file are set up that way. Ideally you would want to use embedded SVG format, but Chrome is hell-bent on not supporting it. The only format supported by all browsers is the COLR/CPAL format.
+The web version has to be COLR/CPAL, and the Web instances in this file are set up that way. Ideally you would want to use embedded SVG format, but Chrome is hell-bent on not supporting it. The only format supported by all browsers is the COLR/CPAL format. Some websites say colour web fonts are not possible merely because SVG is not supported by Chrome, but COLR/CPAL is universally supported. Although it has graphical limitation, some form of color fonts are certainly possible.
 
 In the instance, you need to specify which color palette you're going to use. That's the custom parameter called "Color Palette for CPAL". Remember, computers count from zero and the first palette has to be 0.
 

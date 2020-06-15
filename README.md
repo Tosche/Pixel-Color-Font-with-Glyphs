@@ -14,9 +14,9 @@ For the maximum convenience to draw pixels, I would advise using my [Pixel Pen t
 
 ## How to set up colour fonts
 
-There are multiple ways to make color fonts, and this font is set up for making the colour fonts the Microsoft way, using COLR/CPAL. You set up the colours you're going to use (found in Font Info > Master > Color Palettes custom parameter). You can have multiple palettes but only the first one is viewable during design.
+There are multiple ways to make color fonts, and this font is set up for making the colour fonts the Microsoft way, using COLR/CPAL workflow, from which you can also export SVG. You set up the colours you're going to use (found in Font Info > Master > Color Palettes custom parameter). You may use transparency in the colour values. You can have multiple palettes but only the first one is viewable during design.
 
-You add a layer in each glyph, and name it "Color X" (X being the index of the color. And you need a space inbetween) for it to be coloured. The default layer works as fallback which should be shown when an environment does not support colour font. It has to be designed in a certain way though (read Web)
+You add a layer in each glyph, and name it "Color X" (X being the index of the color strating from 0. And you need a space inbetween) for it to be coloured. The default layer works as fallback which should be shown when an environment does not support colour font. It has to be designed in a certain way though (read Web)
 
 Alternate colour palette can be exported by choosing a palette index using the custom parameter found in the instance tab.
 
@@ -24,21 +24,21 @@ The instances are set up for web and desktop, since the browser/desktop support 
 
 ### Web
 
-The web version has to be COLR/CPAL, and the Web instances in this file are set up that way. Ideally you would want to use embedded SVG format, but Chrome is hell-bent on not supporting it. The only format supported by all browsers is the COLR/CPAL format. Some websites say colour web fonts are not possible merely because SVG is not supported by Chrome, but COLR/CPAL is universally supported. Although it has graphical limitation, some form of color fonts are certainly possible.
+The web version has to be COLR/CPAL, and the Web instances in this file are set up that way. Ideally you would want to use embedded SVG format, but Chrome seems to be hell-bent on not supporting it. The only format supported by all browsers is the COLR/CPAL format. Some websites say colour web fonts are not possible merely because SVG is not supported by Chrome, but COLR/CPAL is universally supported. Although the graphical expression is limited to just layered outlines (no blur, gradient, etc...), there is at least one colour font format that works across the board.
 
 In the instance, you need to specify which color palette you're going to use. That's the custom parameter called "Color Palette for CPAL". Remember, computers count from zero and the first palette has to be 0.
 
-Chrome and Firefox use the default layer (i.e. fallback) in a particular way. Basically its bounds has to cover the sum of all Color layers outlines, and the fallback layer works kind of like a mask. For demonstration purpose, I have put a lowercase "a" in the same Color design but smaller area of default outline. You can see that the "a" appears clipped in Chrome and Firefox. Maybe the easiest solution (laziest) is to put a big-enough rectangle in every glyph.
+Chrome and Firefox use the default layer (i.e. fallback) in a particular way. Basically its bounds has to cover the sum of all Color layers outlines, and the fallback layer works kind of like a mask. For demonstration purpose, I have put a lowercase "a" in the same Color design but smaller area of default outline. You can see that the "a" appears clipped in Chrome and Firefox. Maybe the easiest solution (laziest) is to put a big enough rectangle in every glyph.
 
 <img src="https://raw.githubusercontent.com/Tosche/Pixel-Color-Font-with-Glyphs/master/Images/COLR_Clipping.gif" alt="COLR_Clipping">
 
 ### Desktop
 
-The most consistently supported color format is SVG, in fact SVG-embedded OTF is so close to being universally supported (the only outlier being Chrome). Creative Cloud and Core Text apps (TextEdit, Pages, etc.) support the SVG format, so that's the way.
+The most consistently supported color font format is SVG; Creative Cloud and Core Text apps: TextEdit, Pages, etc. support the SVG format. In fact SVG-embedded OTF is very close to being universally supported both in desktop and web apps (the only outlier being Chrome), maybe one day we can just use SVG.
 
 The normal way to make an SVG-embedded color font with Glyphs is to make a new layer in a glyph, rename it as "svg", and drop an SVG file, and repeat that to all glyphs. However, Glyphs can generate an SVG-embedded OTF using the COLR/CPAL source. All you need to do is to add "Color Layers to SVG" instance custom parameter in order to declare that you're going to export it as such, and specify which palette you're going to use, via "Color Palette for SVG". Remember, computers count from zero and the first palette has to be 0.
 
-Unlike the web solution, the fallback outline does not have to cover the whole area of your color design (at least where I tested)
+Unlike the web solution, the fallback outline does not have to cover the whole area of your color design at least where I tested.
 
 ##### License
 
